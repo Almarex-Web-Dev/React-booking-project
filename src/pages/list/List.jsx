@@ -6,14 +6,19 @@ import Navbar from '../../components/navbar/Navbar'
 import Header from '../../components/header/Header'
 import SearchItem from '../../components/searchItem/SearchItem'
 import './list.css'
+import { useEffect } from 'react'
 
 const List = () => {
   const location = useLocation()
-  const [destination, setDestination] = useState(location.state.destination)
+  const [destination, setDestination] = useState(null)
   const [date, setDate] = useState(location.state.date)
   const [openDate, setOpenDate] = useState(false)
-  const [options, setOptions] = useState(location.state.options)
+  const [options, setOptions] = useState(null)
 
+  useEffect(() => {
+    setDestination(location.state.destination)
+    setOptions(location.state.options)
+  }, [destination, location.state.destination, location.state.options, options])
   return (
     <>
       <div>
