@@ -1,0 +1,37 @@
+.featureProp {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.featurePropItem {
+  flex: 1;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.featurePropImg {
+  width: 100%;
+  object-fit: cover;
+}
+.featurePropName {
+  font-weight: bold;
+}
+.featurePropCity {
+  font-weight: 300;
+}
+.featurePropPrice {
+  font-weight: 500;
+}
+.featurePropRating > button {
+  background-color: #003580;
+  color: #fff;
+  border: none;
+  padding: 3px;
+  margin: 0 5px 0 0;
+  font-weight: bold;
+}
+.featurePropRating span {
+  font-size: 14px;
+}
